@@ -8,6 +8,137 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .menu-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .menu-sidebar h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .menu-sidebar ul {
+            list-style: none;
+        }
+        
+        .menu-sidebar ul li {
+            margin-bottom: 12px;
+        }
+        
+        .menu-sidebar ul li a {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .menu-sidebar ul li a:hover,
+        .menu-sidebar ul li a.active {
+            color: var(--black);
+        }
+        
+        .menu-content {
+            min-height: 400px;
+        }
+        
+        .menu-category {
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--off-white);
+        }
+        
+        .menu-category:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-category h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        
+        .menu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--off-white);
+        }
+        
+        .menu-row:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-row-name {
+            font-size: 1rem;
+        }
+        
+        .menu-row-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+        
+        .menu-description {
+            color: var(--medium-gray);
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .menu-note {
+            background: var(--off-white);
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-sidebar {
+                position: static;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid var(--off-white);
+            }
+            
+            .menu-sidebar h4 {
+                width: 100%;
+            }
+            
+            .menu-sidebar ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 20px;
+            }
+            
+            .menu-sidebar ul li {
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -24,7 +155,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">'t Vijfde Seizoen</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
                 <li><a href="helden.html">Helden</a></li>
                 <li><a href="impressie.html">Impressie</a></li>
                 <li><a href="reserveer.html">Reserveer</a></li>
@@ -40,208 +171,148 @@
         <div class="hero-bg" style="background-image: url('images/001.jpg')"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Onze Menukaart</h1>
+            <h1>Menukaart</h1>
             <p class="hero-tagline">Seizoensgebonden gerechten met lokale producten</p>
         </div>
     </section>
 
-    <!-- Menu Introduction -->
-    <section>
-        <div class="content-block text-center">
-            <img src="images/logo-seizoen.png" alt="" style="width: 60px; margin-bottom: 30px;">
-            <p class="serif italic" style="font-size: 1.3rem; color: var(--medium-gray); margin-bottom: 20px;">
-                "Aan elk van de vier seizoenen een extra dimensie toevoegen"
-            </p>
-            <p>Onze menukaart verandert mee met de seizoenen. We werken uitsluitend met verse, lokale ingrediënten van onze vaste leveranciers en kwekers uit de streek.</p>
-        </div>
-    </section>
-
-    <!-- Lunch Menu -->
-    <section class="section-gray">
-        <div class="container">
-            <div class="menu-section">
-                <div class="menu-title">
-                    <h3>Lunch Menu</h3>
-                    <span class="line"></span>
-                </div>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Seizoenslunch 3 gangen</h4>
-                            <p>Amuse, hoofdgerecht naar keuze, dessert</p>
-                        </div>
-                        <span class="menu-item-price">€ 45</span>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Seizoenslunch 4 gangen</h4>
-                            <p>Amuse, voorgerecht, hoofdgerecht, dessert</p>
-                        </div>
-                        <span class="menu-item-price">€ 58</span>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Veldmenu Lunch (Vegetarisch)</h4>
-                            <p>Volledig plantaardig 4 gangen menu</p>
-                        </div>
-                        <span class="menu-item-price">€ 55</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dinner Menu -->
+    <!-- Menu Section -->
     <section>
         <div class="container">
-            <div class="menu-section">
-                <div class="menu-title">
-                    <h3>Diner Menu</h3>
-                    <span class="line"></span>
+            <div class="menu-layout">
+                <!-- Sidebar -->
+                <div class="menu-sidebar">
+                    <h4>Menuformules</h4>
+                    <ul>
+                        <li><a href="#lunch" class="active">Middag - Lunch</a></li>
+                        <li><a href="#gevoel">Gevoel - 3 gangen</a></li>
+                        <li><a href="#verlangen">Verlangen - 4 gangen</a></li>
+                        <li><a href="#expressie">Expressie - 5 gangen</a></li>
+                        <li><a href="#carte">A la Carte</a></li>
+                    </ul>
                 </div>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>'t Vijfde Seizoen - 5 gangen</h4>
-                            <p>Onze signature ervaring: amuse, 2 voorgerechten, hoofdgerecht, dessert</p>
+                
+                <!-- Menu Content -->
+                <div class="menu-content">
+                    <!-- Lunch -->
+                    <div class="menu-category" id="lunch">
+                        <h2>Middag - Lunch</h2>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Soep + Hoofdgerecht</span>
+                            <span class="menu-row-price">€ 33.00</span>
                         </div>
-                        <span class="menu-item-price">€ 85</span>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>'t Vijfde Seizoen - 6 gangen</h4>
-                            <p>Uitgebreide culinaire reis door de seizoenen</p>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Voorgerecht + Hoofdgerecht</span>
+                            <span class="menu-row-price">€ 39.00</span>
                         </div>
-                        <span class="menu-item-price">€ 98</span>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Chef's Table - 8 gangen</h4>
-                            <p>Volledige overgave aan de chef - verrassing gegarandeerd</p>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Soep + Voorgerecht + Hoofdgerecht</span>
+                            <span class="menu-row-price">€ 47.00</span>
                         </div>
-                        <span class="menu-item-price">€ 125</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Veldmenu -->
-    <section class="section-gray">
-        <div class="container">
-            <div class="menu-section">
-                <div class="menu-title">
-                    <h3>Veldmenu (Vegetarisch)</h3>
-                    <span class="line"></span>
-                </div>
-                <p style="color: var(--medium-gray); margin-bottom: 30px;">
-                    Met onze veldmenu's gaan we nog één stapje verder; hiermee serveren we u verrassende vegetarische alternatieven die bewijzen dat groenten de hoofdrol verdienen.
-                </p>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Veldmenu - 4 gangen</h4>
-                            <p>Seizoensgroenten in de hoofdrol</p>
+                    
+                    <!-- Gevoel -->
+                    <div class="menu-category" id="gevoel">
+                        <h2>Gevoel - 3 gangen</h2>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Menu Gevoel</span>
+                                <p class="menu-description">Voorgerecht, hoofdgerecht, dessert</p>
+                            </div>
+                            <span class="menu-row-price">€ 55.00</span>
                         </div>
-                        <span class="menu-item-price">€ 72</span>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Veldmenu - 5 gangen</h4>
-                            <p>Uitgebreide vegetarische ervaring</p>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Veldmenu Gevoel</span>
+                                <p class="menu-description">Vegetarisch 3 gangen menu</p>
+                            </div>
+                            <span class="menu-row-price">€ 50.00</span>
                         </div>
-                        <span class="menu-item-price">€ 85</span>
                     </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Veldmenu - 6 gangen</h4>
-                            <p>Onze complete plantaardige reis</p>
+                    
+                    <!-- Verlangen -->
+                    <div class="menu-category" id="verlangen">
+                        <h2>Verlangen - 4 gangen</h2>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Menu Verlangen</span>
+                                <p class="menu-description">Amuse, voorgerecht, hoofdgerecht, dessert</p>
+                            </div>
+                            <span class="menu-row-price">€ 68.00</span>
                         </div>
-                        <span class="menu-item-price">€ 95</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seasonal Dishes Preview -->
-    <section>
-        <div class="section-header">
-            <h2>Seizoensgerechten</h2>
-            <div class="section-divider"></div>
-            <p>Een greep uit onze huidige kaart</p>
-        </div>
-        <div class="container">
-            <div class="menu-items" style="max-width: 800px; margin: 0 auto;">
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Noordzeebisque</h4>
-                        <p>Gamba, zeewier, croutons van zuurdesem</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Gerookte Forel</h4>
-                        <p>Rode kool, appel, mierikswortel</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Brasvar Varken</h4>
-                        <p>Wortelgroenten, jus van Brugse Zot</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Courgette & Geitenkaas</h4>
-                        <p>Aubergine, pijnboompitten, basilicum (V)</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Chocolade Kalamansi</h4>
-                        <p>Sesam, yuzu, crumble van cacao</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wine & Drinks -->
-    <section class="section-gray">
-        <div class="container">
-            <div class="menu-section">
-                <div class="menu-title">
-                    <h3>Wijn & Dranken</h3>
-                    <span class="line"></span>
-                </div>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Wijnarrangement 4 gangen</h4>
-                            <p>Zorgvuldig geselecteerde wijnen bij elke gang</p>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Veldmenu Verlangen</span>
+                                <p class="menu-description">Vegetarisch 4 gangen menu</p>
+                            </div>
+                            <span class="menu-row-price">€ 63.00</span>
                         </div>
-                        <span class="menu-item-price">€ 38</span>
                     </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Wijnarrangement 5 gangen</h4>
-                            <p>Premium selectie van onze sommelier</p>
+                    
+                    <!-- Expressie -->
+                    <div class="menu-category" id="expressie">
+                        <h2>Expressie - 5 gangen</h2>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Menu Expressie</span>
+                                <p class="menu-description">Amuse, 2 voorgerechten, hoofdgerecht, dessert</p>
+                            </div>
+                            <span class="menu-row-price">€ 82.00</span>
                         </div>
-                        <span class="menu-item-price">€ 48</span>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Veldmenu Expressie</span>
+                                <p class="menu-description">Vegetarisch 5 gangen menu</p>
+                            </div>
+                            <span class="menu-row-price">€ 77.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <div>
+                                <span class="menu-row-name">Wijnarrangement</span>
+                                <p class="menu-description">Geselecteerde wijnen per gang</p>
+                            </div>
+                            <span class="menu-row-price">€ 45.00</span>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Mocktail Arrangement</h4>
-                            <p>Alcoholvrije creaties met seizoensproducten</p>
+                    
+                    <!-- A la Carte -->
+                    <div class="menu-category" id="carte">
+                        <h2>A la Carte</h2>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Soep van de dag</span>
+                            <span class="menu-row-price">€ 12.00</span>
                         </div>
-                        <span class="menu-item-price">€ 28</span>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Voorgerecht</span>
+                            <span class="menu-row-price">€ 22.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Hoofdgerecht vis</span>
+                            <span class="menu-row-price">€ 36.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Hoofdgerecht vlees</span>
+                            <span class="menu-row-price">€ 38.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Hoofdgerecht vegetarisch</span>
+                            <span class="menu-row-price">€ 32.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Dessert</span>
+                            <span class="menu-row-price">€ 14.00</span>
+                        </div>
+                        <div class="menu-row">
+                            <span class="menu-row-name">Kaasplank</span>
+                            <span class="menu-row-price">€ 16.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-note">
+                        <p>Onze menukaart verandert regelmatig op basis van het seizoen en beschikbaarheid.<br>
+                        Allergieën of dieetwensen? Laat het ons weten bij uw reservatie.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="menu-note">
-                <p>Onze menukaart is een momentopname. De gerechten veranderen regelmatig op basis van beschikbaarheid en seizoen. Allergieën of dieetwensen? Laat het ons weten bij uw reservatie.</p>
             </div>
         </div>
     </section>
@@ -306,6 +377,14 @@
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
+        
+        // Smooth scroll and active state for menu sidebar
+        document.querySelectorAll('.menu-sidebar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                document.querySelectorAll('.menu-sidebar a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
     </script>
 </body>
 </html>

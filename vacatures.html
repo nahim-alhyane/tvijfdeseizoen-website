@@ -49,6 +49,7 @@
             font-size: 1.5rem;
             color: var(--medium-gray);
             transition: transform 0.3s ease;
+            font-weight: 300;
         }
         
         .vacancy-card.open .vacancy-toggle {
@@ -106,12 +107,22 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            padding: 15px;
+            padding: 20px;
             background: var(--off-white);
         }
         
         .benefit-icon {
-            font-size: 1.5rem;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--black);
+            stroke-width: 1.5;
+            fill: none;
         }
         
         .benefit-text {
@@ -136,6 +147,20 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        .why-work-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 20px;
+        }
+        
+        .why-work-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--black);
+            stroke-width: 1.5;
+            fill: none;
+        }
     </style>
 </head>
 <body>
@@ -158,7 +183,7 @@
                 <li><a href="impressie.html">Impressie</a></li>
                 <li><a href="reserveer.html">Reserveer</a></li>
                 <li><a href="cadeaubon.html">Cadeaubon</a></li>
-                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="vacatures.html" class="active">Vacatures</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -218,19 +243,27 @@
                     <h4>Wat bieden wij?</h4>
                     <div class="benefits-grid">
                         <div class="benefit-item">
-                            <span class="benefit-icon">💰</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
                             <span class="benefit-text">Aantrekkelijke verloning</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">👥</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
                             <span class="benefit-text">Gezellige werksfeer</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">🍽️</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
                             <span class="benefit-text">Maaltijdcheques</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">📅</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
                             <span class="benefit-text">Vrij op wo, zo en do-avond</span>
                         </div>
                     </div>
@@ -269,19 +302,27 @@
                     <h4>Wat bieden wij?</h4>
                     <div class="benefits-grid">
                         <div class="benefit-item">
-                            <span class="benefit-icon">🎉</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
                             <span class="benefit-text">Dynamische werksfeer</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">📈</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                            </div>
                             <span class="benefit-text">Kans om je te ontwikkelen</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">🍷</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M12 11A7 7 0 0 0 5 4v0M12 11A7 7 0 0 1 19 4v0"/></svg>
+                            </div>
                             <span class="benefit-text">Wijnkennis uitbreiden</span>
                         </div>
                         <div class="benefit-item">
-                            <span class="benefit-icon">🤝</span>
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
                             <span class="benefit-text">Hecht team</span>
                         </div>
                     </div>
@@ -317,17 +358,23 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                 <div class="text-center">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🌿</div>
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
                     <h4 style="margin-bottom: 15px;">Seizoensgebonden keuken</h4>
                     <p style="color: var(--medium-gray);">Werk met de beste lokale seizoensproducten en leer van ervaren chefs.</p>
                 </div>
                 <div class="text-center">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">👨‍👩‍👧‍👦</div>
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
                     <h4 style="margin-bottom: 15px;">Familiale sfeer</h4>
                     <p style="color: var(--medium-gray);">Klein team waar iedereen telt en gewaardeerd wordt.</p>
                 </div>
                 <div class="text-center">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">⚖️</div>
+                    <div class="why-work-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+                    </div>
                     <h4 style="margin-bottom: 15px;">Work-life balance</h4>
                     <p style="color: var(--medium-gray);">Vaste vrije dagen zodat je ook tijd hebt voor jezelf.</p>
                 </div>
