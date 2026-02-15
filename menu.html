@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menukaart | 't Vijfde Seizoen</title>
+    <meta name="description" content="Ontdek onze seizoensgebonden menukaart met lokale streekproducten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="helden.html">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html">Reserveer</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/001.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Onze Menukaart</h1>
+            <p class="hero-tagline">Seizoensgebonden gerechten met lokale producten</p>
+        </div>
+    </section>
+
+    <!-- Menu Introduction -->
+    <section>
+        <div class="content-block text-center">
+            <img src="images/logo-seizoen.png" alt="" style="width: 60px; margin-bottom: 30px;">
+            <p class="serif italic" style="font-size: 1.3rem; color: var(--medium-gray); margin-bottom: 20px;">
+                "Aan elk van de vier seizoenen een extra dimensie toevoegen"
+            </p>
+            <p>Onze menukaart verandert mee met de seizoenen. We werken uitsluitend met verse, lokale ingrediënten van onze vaste leveranciers en kwekers uit de streek.</p>
+        </div>
+    </section>
+
+    <!-- Lunch Menu -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="menu-section">
+                <div class="menu-title">
+                    <h3>Lunch Menu</h3>
+                    <span class="line"></span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Seizoenslunch 3 gangen</h4>
+                            <p>Amuse, hoofdgerecht naar keuze, dessert</p>
+                        </div>
+                        <span class="menu-item-price">€ 45</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Seizoenslunch 4 gangen</h4>
+                            <p>Amuse, voorgerecht, hoofdgerecht, dessert</p>
+                        </div>
+                        <span class="menu-item-price">€ 58</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Veldmenu Lunch (Vegetarisch)</h4>
+                            <p>Volledig plantaardig 4 gangen menu</p>
+                        </div>
+                        <span class="menu-item-price">€ 55</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinner Menu -->
+    <section>
+        <div class="container">
+            <div class="menu-section">
+                <div class="menu-title">
+                    <h3>Diner Menu</h3>
+                    <span class="line"></span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>'t Vijfde Seizoen - 5 gangen</h4>
+                            <p>Onze signature ervaring: amuse, 2 voorgerechten, hoofdgerecht, dessert</p>
+                        </div>
+                        <span class="menu-item-price">€ 85</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>'t Vijfde Seizoen - 6 gangen</h4>
+                            <p>Uitgebreide culinaire reis door de seizoenen</p>
+                        </div>
+                        <span class="menu-item-price">€ 98</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Chef's Table - 8 gangen</h4>
+                            <p>Volledige overgave aan de chef - verrassing gegarandeerd</p>
+                        </div>
+                        <span class="menu-item-price">€ 125</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veldmenu -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="menu-section">
+                <div class="menu-title">
+                    <h3>Veldmenu (Vegetarisch)</h3>
+                    <span class="line"></span>
+                </div>
+                <p style="color: var(--medium-gray); margin-bottom: 30px;">
+                    Met onze veldmenu's gaan we nog één stapje verder; hiermee serveren we u verrassende vegetarische alternatieven die bewijzen dat groenten de hoofdrol verdienen.
+                </p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Veldmenu - 4 gangen</h4>
+                            <p>Seizoensgroenten in de hoofdrol</p>
+                        </div>
+                        <span class="menu-item-price">€ 72</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Veldmenu - 5 gangen</h4>
+                            <p>Uitgebreide vegetarische ervaring</p>
+                        </div>
+                        <span class="menu-item-price">€ 85</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Veldmenu - 6 gangen</h4>
+                            <p>Onze complete plantaardige reis</p>
+                        </div>
+                        <span class="menu-item-price">€ 95</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Dishes Preview -->
+    <section>
+        <div class="section-header">
+            <h2>Seizoensgerechten</h2>
+            <div class="section-divider"></div>
+            <p>Een greep uit onze huidige kaart</p>
+        </div>
+        <div class="container">
+            <div class="menu-items" style="max-width: 800px; margin: 0 auto;">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Noordzeebisque</h4>
+                        <p>Gamba, zeewier, croutons van zuurdesem</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Gerookte Forel</h4>
+                        <p>Rode kool, appel, mierikswortel</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Brasvar Varken</h4>
+                        <p>Wortelgroenten, jus van Brugse Zot</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Courgette & Geitenkaas</h4>
+                        <p>Aubergine, pijnboompitten, basilicum (V)</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Chocolade Kalamansi</h4>
+                        <p>Sesam, yuzu, crumble van cacao</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine & Drinks -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="menu-section">
+                <div class="menu-title">
+                    <h3>Wijn & Dranken</h3>
+                    <span class="line"></span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Wijnarrangement 4 gangen</h4>
+                            <p>Zorgvuldig geselecteerde wijnen bij elke gang</p>
+                        </div>
+                        <span class="menu-item-price">€ 38</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Wijnarrangement 5 gangen</h4>
+                            <p>Premium selectie van onze sommelier</p>
+                        </div>
+                        <span class="menu-item-price">€ 48</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Mocktail Arrangement</h4>
+                            <p>Alcoholvrije creaties met seizoensproducten</p>
+                        </div>
+                        <span class="menu-item-price">€ 28</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <p>Onze menukaart is een momentopname. De gerechten veranderen regelmatig op basis van beschikbaarheid en seizoen. Allergieën of dieetwensen? Laat het ons weten bij uw reservatie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-dark text-center">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Zin gekregen?</h2>
+            <p class="serif italic" style="color: var(--light-gray); margin-bottom: 40px; font-size: 1.2rem;">Reserveer nu uw tafel</p>
+            <a href="reserveer.html" class="btn btn-outline btn-lg">Reserveren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

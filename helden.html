@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onze Helden | 't Vijfde Seizoen</title>
+    <meta name="description" content="Ontmoet de lokale leveranciers en kwekers achter onze gerechten.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="helden.html" class="active">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html">Reserveer</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/brasvar-nevel.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Onze Helden</h1>
+            <p class="hero-tagline">De mensen achter onze producten</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <div class="content-block text-center">
+            <img src="images/logo-seizoen.png" alt="" style="width: 60px; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 30px;">Respect voor onze helden</h2>
+            <p>Het is geen gevolg van zoeken, nog minder blijkt het vinden. Het zijn telkens ontmoetingen, waarbij we elkaar volledig begrijpen. We spreken dezelfde taal en gaan voor eenzelfde verhaal.</p>
+            <div class="highlight-quote">
+                Voor u en voor de wereld.
+            </div>
+            <p>Onze helden zijn de boeren, kwekers en ambachtslui die met dezelfde passie en toewijding werken als wij. Zij zorgen voor de beste seizoensproducten die de basis vormen van alles wat we serveren.</p>
+        </div>
+    </section>
+
+    <!-- Heroes Grid -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Onze Leveranciers</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/brasvar-nevel.jpg" alt="Brasvar Nevel">
+                    </div>
+                    <h4>Brasvar Nevel</h4>
+                    <p>Ambachtelijk varkensvlees van het Brasvar-ras. Dieren die buiten opgroeien en genieten van een natuurlijk leven.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/terras.jpg" alt="Lokale Groentekwekers">
+                    </div>
+                    <h4>Seizoensgroenten</h4>
+                    <p>Verse groenten van lokale kwekers uit de regio. Geoogst op het perfecte moment voor maximale smaak.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/forel.jpg" alt="Duurzame Visserij">
+                    </div>
+                    <h4>Duurzame Vis</h4>
+                    <p>Verse vangst uit de Noordzee en lokaal gekweekte vis. Altijd met respect voor het ecosysteem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section>
+        <div class="container">
+            <div class="content-block text-center">
+                <h2 style="margin-bottom: 30px;">Onze Filosofie</h2>
+                <p>Wij geloven in korte ketens en directe relaties met onze producenten. Geen tussenpersonen, maar persoonlijke banden. Dit zorgt niet alleen voor de beste kwaliteit, maar ook voor eerlijke prijzen voor de boer en transparantie voor u als gast.</p>
+                <p>Elk seizoen brengt nieuwe producten en nieuwe mogelijkheden. Wij passen ons menu aan op wat de natuur ons geeft, niet andersom. Dat is respect voor het product, de kweker én het milieu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Waar Wij Voor Staan</h2>
+                <div class="section-divider" style="background: var(--medium-gray);"></div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; text-align: center;">
+                <div>
+                    <h3 style="font-size: 3rem; margin-bottom: 15px;">100%</h3>
+                    <p style="color: var(--light-gray);">Lokale Producten</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; margin-bottom: 15px;">0 km</h3>
+                    <p style="color: var(--light-gray);">Voedselkilometers (gemiddeld)</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; margin-bottom: 15px;">4</h3>
+                    <p style="color: var(--light-gray);">Seizoenen + 1</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; margin-bottom: 15px;">∞</h3>
+                    <p style="color: var(--light-gray);">Passie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Ons Team</h2>
+                <div class="section-divider"></div>
+                <p>De mensen die uw ervaring onvergetelijk maken</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/broes-lien.jpg" alt="Team">
+                    </div>
+                    <h4>Broes & Lien</h4>
+                    <p>De drijvende krachten achter 't Vijfde Seizoen. Met passie voor eten en gastvrijheid.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/pointvirgule_170616_0054-1.jpg" alt="Keuken">
+                    </div>
+                    <h4>De Keuken</h4>
+                    <p>Waar creativiteit en vakmanschap samenkomen om seizoensproducten te transformeren.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/mocktails.jpg" alt="Service">
+                    </div>
+                    <h4>De Zaal</h4>
+                    <p>Uw gastheren en -vrouwen die zorgen voor een warme ontvangst en perfecte service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-gray text-center">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Ontdek onze keuken</h2>
+            <p style="color: var(--medium-gray); margin-bottom: 40px;">Proef zelf de kwaliteit van onze helden</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="menu.html" class="btn btn-primary">Bekijk Menu</a>
+                <a href="reserveer.html" class="btn btn-outline-dark">Reserveren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

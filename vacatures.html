@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacatures | 't Vijfde Seizoen</title>
+    <meta name="description" content="Werken bij 't Vijfde Seizoen? Bekijk onze openstaande vacatures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .vacancy-card {
+            background: white;
+            border: 1px solid var(--off-white);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .vacancy-card:hover {
+            border-color: var(--black);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .vacancy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--off-white);
+            cursor: pointer;
+        }
+        
+        .vacancy-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .vacancy-tag {
+            display: inline-block;
+            background: var(--off-white);
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 15px;
+        }
+        
+        .vacancy-toggle {
+            font-size: 1.5rem;
+            color: var(--medium-gray);
+            transition: transform 0.3s ease;
+        }
+        
+        .vacancy-card.open .vacancy-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .vacancy-content {
+            padding: 0 40px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .vacancy-card.open .vacancy-content {
+            padding: 40px;
+            max-height: 2000px;
+        }
+        
+        .vacancy-content h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+        
+        .vacancy-content h4:first-child {
+            margin-top: 0;
+        }
+        
+        .vacancy-content p {
+            color: var(--medium-gray);
+            margin-bottom: 15px;
+        }
+        
+        .vacancy-content ul {
+            color: var(--medium-gray);
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .vacancy-content ul li {
+            margin-bottom: 8px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--off-white);
+        }
+        
+        .benefit-icon {
+            font-size: 1.5rem;
+        }
+        
+        .benefit-text {
+            font-size: 0.9rem;
+        }
+        
+        .team-cta {
+            background: var(--black);
+            color: white;
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .team-cta h3 {
+            margin-bottom: 20px;
+        }
+        
+        .team-cta p {
+            color: var(--light-gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="helden.html">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html">Reserveer</a></li>
+                <li><a href="vacatures.html" class="active">Vacatures</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/pointvirgule_170616_0054-1.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Vacatures</h1>
+            <p class="hero-tagline">Word deel van ons team</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <div class="content-block text-center">
+            <img src="images/logo-seizoen.png" alt="" style="width: 60px; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 30px;">Werken bij 't Vijfde Seizoen</h2>
+            <p>Ben je gepassioneerd door gastronomie en wil je deel uitmaken van een hecht team? Bij 't Vijfde Seizoen zoeken we mensen die onze liefde voor seizoensgebonden koken en gastvrijheid delen.</p>
+        </div>
+    </section>
+
+    <!-- Vacancies -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Openstaande Vacatures</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Vacancy 1: Keukenmedewerker -->
+            <div class="vacancy-card open">
+                <div class="vacancy-header" onclick="toggleVacancy(this)">
+                    <div>
+                        <h3>Keukenmedewerker <span class="vacancy-tag">M/V/X</span></h3>
+                    </div>
+                    <span class="vacancy-toggle">+</span>
+                </div>
+                <div class="vacancy-content">
+                    <p style="font-size: 1.1rem; color: var(--black);">
+                        Heb jij een passie voor koken en ben je op zoek naar een lekkere job om je vingers van af te likken?
+                    </p>
+                    <p>
+                        Wij zoeken een enthousiaste teamspeler om ons keukenteam te versterken!
+                    </p>
+                    
+                    <h4>Wie zoeken we?</h4>
+                    <ul>
+                        <li>Een leergierige jongeling die de smaak snel te pakken krijgt</li>
+                        <li>Je hebt een opleiding achter de rug en misschien al wat ervaring</li>
+                        <li>Maar niet te veel, want wij willen je graag zelf "op smaak brengen"!</li>
+                        <li>Je bent het juiste "ingrediënt" voor ons team</li>
+                    </ul>
+                    
+                    <h4>Wat bieden wij?</h4>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💰</span>
+                            <span class="benefit-text">Aantrekkelijke verloning</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">👥</span>
+                            <span class="benefit-text">Gezellige werksfeer</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🍽️</span>
+                            <span class="benefit-text">Maaltijdcheques</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📅</span>
+                            <span class="benefit-text">Vrij op wo, zo en do-avond</span>
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; margin-top: 30px;">
+                        Ben jij à point om in ons keukenteam geïntroduceerd te worden?
+                    </p>
+                    
+                    <a href="mailto:restaurant@tvijfdeseizoen.com?subject=Vacature:%20Keukenmedewerker" class="btn btn-primary" style="margin-top: 20px;">
+                        Solliciteer Nu
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Vacancy 2: Medewerker Zaal -->
+            <div class="vacancy-card">
+                <div class="vacancy-header" onclick="toggleVacancy(this)">
+                    <div>
+                        <h3>Medewerker Zaal <span class="vacancy-tag">M/V/X</span></h3>
+                    </div>
+                    <span class="vacancy-toggle">+</span>
+                </div>
+                <div class="vacancy-content">
+                    <p style="font-size: 1.1rem; color: var(--black);">
+                        Er is ruimte voor een enthousiaste, sociale teamspeler die energie haalt uit het contact met de klanten.
+                    </p>
+                    
+                    <h4>Wie zoeken we?</h4>
+                    <ul>
+                        <li>Iemand die weet hoe je een gastvrije sfeer creëert</li>
+                        <li>Je past binnen onze superfijne teamdynamiek</li>
+                        <li>Kennis van basisnormen voor bediening en gastvrijheid</li>
+                        <li>Opleiding en wijnkennis zijn altijd een plus!</li>
+                    </ul>
+                    
+                    <h4>Wat bieden wij?</h4>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎉</span>
+                            <span class="benefit-text">Dynamische werksfeer</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📈</span>
+                            <span class="benefit-text">Kans om je te ontwikkelen</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🍷</span>
+                            <span class="benefit-text">Wijnkennis uitbreiden</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🤝</span>
+                            <span class="benefit-text">Hecht team</span>
+                        </div>
+                    </div>
+                    
+                    <a href="mailto:restaurant@tvijfdeseizoen.com?subject=Vacature:%20Medewerker%20Zaal" class="btn btn-primary" style="margin-top: 20px;">
+                        Solliciteer Nu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section>
+        <div class="container">
+            <div class="team-cta">
+                <h3>Wij leren je graag kennen!</h3>
+                <p>Stuur ons je gegevens en wie weet ben jij binnenkort onze nieuwe collega!</p>
+                <a href="mailto:restaurant@tvijfdeseizoen.com?subject=Spontane%20Sollicitatie" class="btn btn-outline">
+                    Spontaan Solliciteren
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work Here -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Waarom werken bij ons?</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🌿</div>
+                    <h4 style="margin-bottom: 15px;">Seizoensgebonden keuken</h4>
+                    <p style="color: var(--medium-gray);">Werk met de beste lokale seizoensproducten en leer van ervaren chefs.</p>
+                </div>
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">👨‍👩‍👧‍👦</div>
+                    <h4 style="margin-bottom: 15px;">Familiale sfeer</h4>
+                    <p style="color: var(--medium-gray);">Klein team waar iedereen telt en gewaardeerd wordt.</p>
+                </div>
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">⚖️</div>
+                    <h4 style="margin-bottom: 15px;">Work-life balance</h4>
+                    <p style="color: var(--medium-gray);">Vaste vrije dagen zodat je ook tijd hebt voor jezelf.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function toggleVacancy(header) {
+            const card = header.parentElement;
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

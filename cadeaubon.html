@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadeaubon | 't Vijfde Seizoen</title>
+    <meta name="description" content="Geef een culinaire ervaring cadeau met een cadeaubon van 't Vijfde Seizoen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gift-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .gift-image {
+            position: relative;
+        }
+        
+        .gift-image img {
+            width: 100%;
+            filter: grayscale(50%);
+        }
+        
+        .gift-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+        }
+        
+        .gift-text h2 {
+            margin-bottom: 25px;
+        }
+        
+        .gift-text p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+        
+        .gift-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .gift-feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--off-white);
+        }
+        
+        .gift-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .gift-feature h4 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .gift-feature p {
+            color: var(--medium-gray);
+            font-size: 0.85rem;
+        }
+        
+        .shop-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .shop-info {
+            padding: 50px;
+            background: var(--off-white);
+        }
+        
+        .shop-info h3 {
+            margin-bottom: 25px;
+        }
+        
+        .shop-info p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+        
+        .shop-info ul {
+            color: var(--medium-gray);
+            margin-left: 20px;
+            line-height: 2;
+        }
+        
+        .shop-widget {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 700px;
+        }
+        
+        .shop-widget h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .zenchef-iframe {
+            width: 100%;
+            height: 630px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        @media (max-width: 968px) {
+            .gift-intro {
+                grid-template-columns: 1fr;
+            }
+            
+            .gift-image {
+                order: -1;
+            }
+            
+            .gift-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .shop-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .shop-widget {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="helden.html">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html">Reserveer</a></li>
+                <li><a href="cadeaubon.html" class="active">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/chocolade-dessert.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Cadeaubon</h1>
+            <p class="hero-tagline">Geef een onvergetelijke culinaire ervaring cadeau</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <div class="container">
+            <div class="gift-intro">
+                <div class="gift-text">
+                    <img src="images/logo-seizoen.png" alt="" style="width: 60px; margin-bottom: 25px;">
+                    <h2>Het perfecte geschenk</h2>
+                    <p>Op zoek naar een origineel cadeau voor een verjaardag, jubileum of gewoon om iemand te verrassen? Een cadeaubon van 't Vijfde Seizoen is altijd een schot in de roos.</p>
+                    <p>Verras uw geliefden met een culinaire ervaring die ze niet snel zullen vergeten. Onze cadeaubonnen zijn beschikbaar in verschillende bedragen en kunnen gebruikt worden voor onze volledige menukaart.</p>
+                    <a href="#bestellen" class="btn btn-primary" style="margin-top: 20px;">Bestel Nu</a>
+                </div>
+                <div class="gift-image">
+                    <img src="images/001.jpg" alt="Gerecht">
+                    <div class="gift-image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="gift-features">
+                <div class="gift-feature">
+                    <div class="gift-feature-icon">🎁</div>
+                    <h4>Flexibel Bedrag</h4>
+                    <p>Kies zelf het bedrag dat u wilt schenken</p>
+                </div>
+                <div class="gift-feature">
+                    <div class="gift-feature-icon">📧</div>
+                    <h4>Direct Leverbaar</h4>
+                    <p>Per email of afhalen in het restaurant</p>
+                </div>
+                <div class="gift-feature">
+                    <div class="gift-feature-icon">📅</div>
+                    <h4>1 Jaar Geldig</h4>
+                    <p>Ruim de tijd om te genieten</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="bestellen">
+        <div class="container">
+            <div class="shop-container">
+                <!-- Info Column -->
+                <div class="shop-info">
+                    <h3>Hoe werkt het?</h3>
+                    <p>Bestel eenvoudig online via ons beveiligd bestelformulier:</p>
+                    <ul>
+                        <li>Kies het gewenste bedrag</li>
+                        <li>Vul de gegevens van de ontvanger in</li>
+                        <li>Voeg eventueel een persoonlijke boodschap toe</li>
+                        <li>Betaal veilig online</li>
+                        <li>De cadeaubon wordt direct per email verstuurd</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 40px;">Praktische Info</h3>
+                    <p><strong>Geldigheid:</strong> 1 jaar na aankoop</p>
+                    <p><strong>Gebruik:</strong> Geldig voor alle menu's en dranken</p>
+                    <p><strong>Reserveren:</strong> Vergeet niet te reserveren wanneer u de bon wilt gebruiken</p>
+                    
+                    <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--lighter-gray);">
+                        <p style="font-size: 0.9rem;"><strong>Vragen?</strong><br>
+                        <a href="tel:093517460">09 351 74 60</a><br>
+                        <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- Zenchef Shop Widget -->
+                <div class="shop-widget">
+                    <h3>Bestel uw Cadeaubon</h3>
+                    <iframe 
+                        src="https://bookings.zenchef.com/shop?rid=371448&fullscreen=1" 
+                        class="zenchef-iframe"
+                        scrolling="yes"
+                        title="Cadeaubon bestellen">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-dark text-center">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Liever zelf komen genieten?</h2>
+            <p class="serif italic" style="color: var(--light-gray); margin-bottom: 40px; font-size: 1.2rem;">Reserveer direct uw tafel</p>
+            <a href="reserveer.html" class="btn btn-outline btn-lg">Reserveren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

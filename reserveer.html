@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserveren | 't Vijfde Seizoen</title>
+    <meta name="description" content="Reserveer uw tafel bij restaurant 't Vijfde Seizoen in Aalter.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .booking-info {
+            padding: 50px;
+            background: var(--off-white);
+        }
+        
+        .booking-info h3 {
+            margin-bottom: 30px;
+        }
+        
+        .info-block {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--lighter-gray);
+        }
+        
+        .info-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .info-block h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--medium-gray);
+            margin-bottom: 12px;
+        }
+        
+        .info-block p {
+            line-height: 1.9;
+        }
+        
+        .phone-cta {
+            display: block;
+            padding: 20px;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-cta:hover {
+            background: var(--dark-gray);
+        }
+        
+        .phone-cta span {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+            opacity: 0.7;
+        }
+        
+        .phone-cta strong {
+            font-size: 1.3rem;
+        }
+        
+        .booking-widget {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 700px;
+        }
+        
+        .booking-widget h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .zenchef-iframe {
+            width: 100%;
+            height: 630px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        @media (max-width: 968px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .booking-widget {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="helden.html">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html" class="active">Reserveer</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/broes-lien.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Reserveer uw tafel</h1>
+            <p class="hero-tagline">Boek online of bel ons</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section>
+        <div class="container">
+            <div class="booking-container">
+                <!-- Info Column -->
+                <div class="booking-info">
+                    <h3>Praktische Info</h3>
+                    
+                    <div class="info-block">
+                        <h4>Adres</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            <strong>Lunch:</strong> 12u00 - 14u15<br>
+                            <strong>Diner:</strong> 19u00 - 21u15
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Gesloten</h4>
+                        <p>
+                            Zondag, woensdag en donderdag<br>
+                            <em style="font-size: 0.9rem; color: var(--medium-gray);">Groepen kunnen ook op deze dagen reserveren</em>
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Contact</h4>
+                        <p>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                    
+                    <a href="tel:093517460" class="phone-cta">
+                        <span>Liever telefonisch reserveren?</span>
+                        <strong>09 351 74 60</strong>
+                    </a>
+                </div>
+                
+                <!-- Zenchef Widget -->
+                <div class="booking-widget">
+                    <h3>Online Reserveren</h3>
+                    <iframe 
+                        src="https://bookings.zenchef.com/results?rid=371448&pid=1001&fullscreen=1" 
+                        class="zenchef-iframe"
+                        scrolling="yes"
+                        title="Reserveren bij 't Vijfde Seizoen">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

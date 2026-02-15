@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | 't Vijfde Seizoen</title>
+    <meta name="description" content="Contacteer restaurant 't Vijfde Seizoen in Aalter. Adres, openingsuren en contactgegevens.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .map-container {
+            height: 400px;
+            background: var(--off-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .map-container:hover iframe {
+            filter: grayscale(50%);
+        }
+        
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .contact-card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--medium-gray);
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p {
+            line-height: 1.8;
+        }
+        
+        .contact-card a {
+            color: var(--black);
+        }
+        
+        .contact-card a:hover {
+            color: var(--medium-gray);
+        }
+        
+        .contact-form-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .contact-text h2 {
+            margin-bottom: 30px;
+        }
+        
+        .contact-text p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--lighter-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--black);
+            color: white;
+            border-color: var(--black);
+        }
+        
+        @media (max-width: 1024px) {
+            .contact-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-cards {
+                grid-template-columns: 1fr;
+                margin-top: -50px;
+            }
+            
+            .contact-form-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen">
+                <span class="nav-title">'t Vijfde Seizoen</span>
+            </a>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">'t Vijfde Seizoen</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="helden.html">Helden</a></li>
+                <li><a href="impressie.html">Impressie</a></li>
+                <li><a href="reserveer.html">Reserveer</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <div class="hero-bg" style="background-image: url('images/terras.jpg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Contact</h1>
+            <p class="hero-tagline">Wij horen graag van u</p>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.5!2d3.4447!3d51.0867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sStationsstraat%209%2C%209880%20Aalter!5e0!3m2!1snl!2sbe!4v1234567890"
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Contact Cards -->
+    <section style="padding-bottom: 100px;">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h4>Adres</h4>
+                    <p>
+                        Stationsstraat 9<br>
+                        9880 Aalter
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <h4>Telefoon</h4>
+                    <p>
+                        <a href="tel:093517460">09 351 74 60</a>
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <h4>Email</h4>
+                    <p>
+                        <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@<br>tvijfdeseizoen.com</a>
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">🕐</div>
+                    <h4>Openingsuren</h4>
+                    <p>
+                        Ma, Di, Vr, Za<br>
+                        12u-14u15 / 19u-21u15
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="contact-form-section">
+                <div class="contact-text">
+                    <h2>Stuur ons een bericht</h2>
+                    <p>Heeft u een vraag, opmerking of feedback? Wij horen graag van u. Vul het formulier in en we nemen zo snel mogelijk contact met u op.</p>
+                    <p>Voor reservaties raden we aan om onze <a href="reserveer.html" style="text-decoration: underline;">online reserveringspagina</a> te gebruiken of ons telefonisch te contacteren.</p>
+                    
+                    <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--lighter-gray);">
+                        <h4 style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--medium-gray); margin-bottom: 15px;">Volg Ons</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="Facebook">f</a>
+                            <a href="#" class="social-link" title="Instagram">📷</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Naam</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Onderwerp</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Kies een onderwerp...</option>
+                            <option value="vraag">Algemene vraag</option>
+                            <option value="reservatie">Reservatie</option>
+                            <option value="groep">Groepsreservatie</option>
+                            <option value="event">Privé evenement</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="andere">Andere</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Verstuur Bericht</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours Detail -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Openingsuren</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Maandag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--medium-gray);">12u00-14u15 / 19u00-21u15</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Dinsdag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--medium-gray);">12u00-14u15 / 19u00-21u15</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Woensdag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--light-gray); font-style: italic;">Gesloten*</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Donderdag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--light-gray); font-style: italic;">Gesloten*</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Vrijdag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--medium-gray);">12u00-14u15 / 19u00-21u15</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--off-white);">
+                        <td style="padding: 15px 0; font-weight: 500;">Zaterdag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--medium-gray);">12u00-14u15 / 19u00-21u15</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px 0; font-weight: 500;">Zondag</td>
+                        <td style="padding: 15px 0; text-align: right; color: var(--light-gray); font-style: italic;">Gesloten*</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 30px; text-align: center; color: var(--medium-gray); font-size: 0.9rem;">
+                    * Op zondag, woensdag en donderdag kan er wel gereserveerd worden door groepen
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-dark text-center">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Klaar om te reserveren?</h2>
+            <p class="serif italic" style="color: var(--light-gray); margin-bottom: 40px; font-size: 1.2rem;">Wij verwelkomen u graag</p>
+            <a href="reserveer.html" class="btn btn-outline btn-lg">Reserveer Nu</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo-seizoen.png" alt="'t Vijfde Seizoen" class="footer-logo">
+                    <p class="footer-tagline">"Seizoenen zijn om van te smullen"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menukaart</a></li>
+                            <li><a href="helden.html">Onze Helden</a></li>
+                            <li><a href="impressie.html">Impressie</a></li>
+                            <li><a href="reserveer.html">Reserveren</a></li>
+                            <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                <li><a href="vacatures.html">Vacatures</a></li>
+                <li><a href="cadeaubon.html">Cadeaubon</a></li>
+                            <li><a href="vacatures.html">Vacatures</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Openingsuren</h4>
+                        <p>
+                            Lunch: 12u00 - 14u15<br>
+                            Diner: 19u00 - 21u15<br><br>
+                            <em>Gesloten op zondag, woensdag en donderdag</em>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p>
+                            Stationsstraat 9<br>
+                            9880 Aalter<br><br>
+                            <a href="tel:093517460">09 351 74 60</a><br>
+                            <a href="mailto:restaurant@tvijfdeseizoen.com">restaurant@tvijfdeseizoen.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 't Vijfde Seizoen — Aalter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
